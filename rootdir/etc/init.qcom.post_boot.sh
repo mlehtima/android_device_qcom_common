@@ -82,9 +82,9 @@ case "$target" in
      chown -h system /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq
      chown -h system /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
      chown -h root.system /sys/devices/system/cpu/mfreq
-     chmod -h 220 /sys/devices/system/cpu/mfreq
+     chmod 220 /sys/devices/system/cpu/mfreq
      chown -h root.system /sys/devices/system/cpu/cpu1/online
-     chmod -h 664 /sys/devices/system/cpu/cpu1/online
+     chmod 664 /sys/devices/system/cpu/cpu1/online
         ;;
 esac
 
@@ -143,13 +143,13 @@ case "$target" in
          chown -h system /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
 	 echo 1 > /sys/module/msm_thermal/core_control/enabled
          chown -h root.system /sys/devices/system/cpu/mfreq
-         chmod -h 220 /sys/devices/system/cpu/mfreq
+         chmod 220 /sys/devices/system/cpu/mfreq
          chown -h root.system /sys/devices/system/cpu/cpu1/online
          chown -h root.system /sys/devices/system/cpu/cpu2/online
          chown -h root.system /sys/devices/system/cpu/cpu3/online
-         chmod -h 664 /sys/devices/system/cpu/cpu1/online
-         chmod -h 664 /sys/devices/system/cpu/cpu2/online
-         chmod -h 664 /sys/devices/system/cpu/cpu3/online
+         chmod 664 /sys/devices/system/cpu/cpu1/online
+         chmod 664 /sys/devices/system/cpu/cpu2/online
+         chmod 664 /sys/devices/system/cpu/cpu3/online
          # set DCVS parameters for CPU
          echo 40000 > /sys/module/msm_dcvs/cores/cpu0/slack_time_max_us
          echo 40000 > /sys/module/msm_dcvs/cores/cpu0/slack_time_min_us
@@ -196,10 +196,10 @@ case "$target" in
          chown -h system /sys/module/msm_dcvs/cores/cpu0/slack_time_min_us
          chown -h system /sys/module/msm_mpdecision/slack_time_max_us
          chown -h system /sys/module/msm_mpdecision/slack_time_min_us
-         chmod -h 664 /sys/module/msm_dcvs/cores/cpu0/slack_time_max_us
-         chmod -h 664 /sys/module/msm_dcvs/cores/cpu0/slack_time_min_us
-         chmod -h 664 /sys/module/msm_mpdecision/slack_time_max_us
-         chmod -h 664 /sys/module/msm_mpdecision/slack_time_min_us
+         chmod 664 /sys/module/msm_dcvs/cores/cpu0/slack_time_max_us
+         chmod 664 /sys/module/msm_dcvs/cores/cpu0/slack_time_min_us
+         chmod 664 /sys/module/msm_mpdecision/slack_time_max_us
+         chmod 664 /sys/module/msm_mpdecision/slack_time_min_us
          if [ -f /sys/devices/soc0/soc_id ]; then
              soc_id=`cat /sys/devices/soc0/soc_id`
          else
@@ -324,13 +324,13 @@ case "$target" in
         chown -h system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
         echo 1 > /sys/module/msm_thermal/core_control/enabled
         chown -h root.system /sys/devices/system/cpu/mfreq
-        chmod -h 220 /sys/devices/system/cpu/mfreq
+        chmod 220 /sys/devices/system/cpu/mfreq
         chown -h root.system /sys/devices/system/cpu/cpu1/online
         chown -h root.system /sys/devices/system/cpu/cpu2/online
         chown -h root.system /sys/devices/system/cpu/cpu3/online
-        chmod -h 664 /sys/devices/system/cpu/cpu1/online
-        chmod -h 664 /sys/devices/system/cpu/cpu2/online
-        chmod -h 664 /sys/devices/system/cpu/cpu3/online
+        chmod 664 /sys/devices/system/cpu/cpu1/online
+        chmod 664 /sys/devices/system/cpu/cpu2/online
+        chmod 664 /sys/devices/system/cpu/cpu3/online
         echo 1 > /dev/cpuctl/cpu.notify_on_migrate
     ;;
 esac
@@ -371,9 +371,9 @@ case "$target" in
         chown -h root.system /sys/devices/system/cpu/cpu1/online
         chown -h root.system /sys/devices/system/cpu/cpu2/online
         chown -h root.system /sys/devices/system/cpu/cpu3/online
-        chmod -h 664 /sys/devices/system/cpu/cpu1/online
-        chmod -h 664 /sys/devices/system/cpu/cpu2/online
-        chmod -h 664 /sys/devices/system/cpu/cpu3/online
+        chmod 664 /sys/devices/system/cpu/cpu1/online
+        chmod 664 /sys/devices/system/cpu/cpu2/online
+        chmod 664 /sys/devices/system/cpu/cpu3/online
     ;;
 esac
 
@@ -415,9 +415,9 @@ case "$target" in
         chown -h root.system /sys/devices/system/cpu/cpu1/online
         chown -h root.system /sys/devices/system/cpu/cpu2/online
         chown -h root.system /sys/devices/system/cpu/cpu3/online
-        chmod -h 664 /sys/devices/system/cpu/cpu1/online
-        chmod -h 664 /sys/devices/system/cpu/cpu2/online
-        chmod -h 664 /sys/devices/system/cpu/cpu3/online
+        chmod 664 /sys/devices/system/cpu/cpu1/online
+        chmod 664 /sys/devices/system/cpu/cpu2/online
+        chmod 664 /sys/devices/system/cpu/cpu3/online
     ;;
 esac
 
@@ -462,13 +462,13 @@ case "$target" in
         chown -h  system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
         chown -h system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
         chown -h root.system /sys/devices/system/cpu/mfreq
-        chmod -h 220 /sys/devices/system/cpu/mfreq
+        chmod 220 /sys/devices/system/cpu/mfreq
         chown -h root.system /sys/devices/system/cpu/cpu1/online
         chown -h root.system /sys/devices/system/cpu/cpu2/online
         chown -h root.system /sys/devices/system/cpu/cpu3/online
-        chmod -h 664 /sys/devices/system/cpu/cpu1/online
-        chmod -h 664 /sys/devices/system/cpu/cpu2/online
-        chmod -h 664 /sys/devices/system/cpu/cpu3/online
+        chmod 664 /sys/devices/system/cpu/cpu1/online
+        chmod 664 /sys/devices/system/cpu/cpu2/online
+        chmod 664 /sys/devices/system/cpu/cpu3/online
     ;;
 esac
 
