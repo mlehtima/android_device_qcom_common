@@ -83,6 +83,8 @@ start_charger_monitor()
 	fi
 }
 
+chown -h system.system /sys/devices/virtual/graphics/fb0/rgb
+
 baseband=`getprop ro.baseband`
 #
 # Suppress default route installation during RA for IPV6; user space will take
