@@ -40,6 +40,12 @@ on fs
     mkdir /dev/bus 0755 root root
     mkdir /dev/bus/usb 0755 root root
 
+# we have to wait for the properties to be loaded;
+# post-fs-data is the first instance we can be sure they are loaded
+on post-fs-data
+    write /sys/class/android_usb/android0/iProduct ${ro.product.name}
+    write /sys/class/android_usb/android0/iManufacturer ${ro.product.manufacturer}
+
 service qcom-usb-sh /system/bin/sh /init.qcom.usb.sh
     class main
     user root
