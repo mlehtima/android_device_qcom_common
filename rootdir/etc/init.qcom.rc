@@ -688,6 +688,7 @@ service atfwd /system/bin/ATFWD-daemon
     class late_start
     user system
     group system radio
+    disabled
 
 service hostapd /system/bin/hostapd -dd /data/hostapd/hostapd.conf
     class late_start
@@ -765,8 +766,9 @@ service fuse_uicc1 /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/u
     class late_start
     disabled
 
-on property:ro.fuse_sdcard=true
-    start sdcard
+#Disabled for Mer
+#on property:ro.fuse_sdcard=true
+#    start sdcard
 
 service hcidump /system/bin/sh /system/etc/hcidump.sh
     user bluetooth
